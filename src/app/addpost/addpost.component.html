@@ -1,0 +1,38 @@
+<form  *ngIf="pubForm" [formGroup]="pubForm" (ngSubmit)="Add()">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" formControlName="Title" class="form-control"[ngClass]="{'is-valid': submitted &&
+        !pubForm.get('Title')?.errors,'is-invalid': submitted && pubForm.get('Title')?.errors}" />
+    </div>
+    <div class="invalid-feedback" *ngIf=" submitted && pubForm.get('Title')?.hasError('required')">
+        Password is required
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="Description" formControlName="Description" class="form-control"  [ngClass]="{'is-valid':
+        submitted && !pubForm.get('Description')?.errors,'is-invalid': submitted && pubForm.get('Description')?.errors}"  />
+    </div>
+    <div class="invalid-feedback" *ngIf=" submitted && pubForm.get('Description')?.hasError('required')">
+        Description is required
+    </div>
+    <div class="form-group">
+        <label for="Categorie">Categorie</label>
+        <input type="text" formControlName="Categorie" class="form-control"  [ngClass]="{'is-valid':
+        submitted && !pubForm.get('Categorie')?.errors,'is-invalid': submitted && pubForm.get('Categorie')?.errors}"  />
+    </div>
+    <div class="invalid-feedback" *ngIf=" submitted && pubForm.get('Categorie')?.hasError('required')">
+        Category is required
+    </div>
+    <div class="form-group">
+        <label for="Date">Date</label>
+        <input type="date" formControlName="Date" class="form-control"
+        [ngClass]="{'is-valid': submitted &&
+        !pubForm.get('Date')?.errors,'is-invalid': submitted && pubForm.get('Date')?.errors}" />
+    </div>
+    <div class="invalid-feedback" *ngIf=" submitted &&pubForm.get('Date')?.hasError('required')">
+        Date is required
+    </div>
+    <button [routerLink]="['/list']" class="btn btn-success">Back</button>
+    <button type="submit" class="btn btn-success">Add</button>
+
+</form>

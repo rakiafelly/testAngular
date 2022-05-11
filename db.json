@@ -1,9 +1,11 @@
 {
-  "posts": [
+  "pub": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Title": "a",
+      "Description": "z",
+      "Categorie": "s",
+      "Date": "2022-05-11",
+      "id": 3
     }
   ],
   "comments": [
