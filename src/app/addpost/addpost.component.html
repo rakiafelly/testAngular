@@ -4,8 +4,8 @@
         <input type="text" formControlName="Title" class="form-control"[ngClass]="{'is-valid': submitted &&
         !pubForm.get('Title')?.errors,'is-invalid': submitted && pubForm.get('Title')?.errors}" />
     </div>
-    <div class="invalid-feedback" *ngIf=" submitted && pubForm.get('Title')?.hasError('required')">
-        Password is required
+    <div class="invalid-feedback">
+        Title is required
     </div>
     <div class="form-group">
         <label for="Description">Description</label>
